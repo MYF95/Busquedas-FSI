@@ -10,6 +10,9 @@ el código.
 métodos de búsqueda primero en anchura y primero en profundidad.
 • Realizar a mano la traza de una búsqueda.
 
+La primera tarea está en la versión 1.0, donde se ha implementado en 'utils.py'
+"SortedFIFOQueue" y en search.py "sorted_graph_search"
+
 Segunda tarea:
 
 A partir del código base entregado, se deberá programar el método de búsqueda

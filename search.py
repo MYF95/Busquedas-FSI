@@ -136,6 +136,10 @@ def breadth_first_graph_search(problem):
     """Search the shallowest nodes in the search tree first. [p 74]"""
     return graph_search(problem, FIFOQueue())  # FIFOQueue -> fringe
 
+def sorted_graph_search(problem):
+    """Search the shallowest nodes in the search tree first. [p 74]"""
+    return graph_search(problem, SortedFIFOQueue())  # FIFOQueue -> fringe
+
 
 def depth_first_graph_search(problem):
     """Search the deepest nodes in the search tree first. [p 74]"""
