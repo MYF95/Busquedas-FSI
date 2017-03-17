@@ -24,3 +24,7 @@ métodos de búsqueda primero en anchura, primero en profundidad y ramificación
 acotación.
 • Demostrar con un ejemplo hecho a mano que si la heurística no fuera consistente no
 se aseguraría el carácter óptimo de la búsqueda 
+
+Version 1.1:
+Se han hecho modificaciones en search.py, sumando un metodo adicional a la clase base h para poder
+acceder a la h desde la instancia de problema

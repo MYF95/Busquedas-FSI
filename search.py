@@ -52,6 +52,8 @@ class Problem:
         and related algorithms try to maximize this value."""
         abstract
 
+    def h(self, state):
+        return state
 
 # ______________________________________________________________________________
 
@@ -102,7 +104,7 @@ def tree_search(problem, fringe):
         node = fringe.pop()
         if problem.goal_test(node.state):
             return node
-        fringe.extend(node.expand(problem))
+        fringe.extend(node.expand(problem),problem)
     return None
 
 
@@ -110,6 +112,9 @@ def breadth_first_tree_search(problem):
     """Search the shallowest nodes in the search tree first. [p 74]"""
     return tree_search(problem, FIFOQueue())
 
+def sorted_first_tree_search(problem):
+    """Search the shallowest nodes in the search tree first. [p 74]"""
+    return tree_search(problem, TreeSortedFIFOQueue())
 
 def depth_first_tree_search(problem):
     """Search the deepest nodes in the search tree first. [p 74]"""
@@ -138,8 +143,7 @@ def breadth_first_graph_search(problem):
 
 def sorted_graph_search(problem):
     """Search the shallowest nodes in the search tree first. [p 74]"""
-    return graph_search(problem, SortedFIFOQueue())  # FIFOQueue -> fringe
-
+    return graph_search(problem, GraphSortedFIFOQueue())  # FIFOQueue -> fringe
 
 def depth_first_graph_search(problem):
     """Search the deepest nodes in the search tree first. [p 74]"""
